@@ -1,0 +1,5 @@
+simple包中已经使用过了LineBasedFrameDecoder、StringDecoder这两种解码器
+
+
+- DelimiterBasedFrameDecoder
+- FixedLengthFrameDecoder

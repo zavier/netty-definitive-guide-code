@@ -1,4 +1,4 @@
-package com.zavier.netty.server;
+package com.zavier.netty.simple.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

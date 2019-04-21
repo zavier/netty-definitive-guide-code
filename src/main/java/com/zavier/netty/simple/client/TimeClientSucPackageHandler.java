@@ -1,15 +1,15 @@
-package com.zavier.netty.client;
+package com.zavier.netty.simple.client;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
-public class TimeClientErrPackageHandler extends ChannelHandlerAdapter {
+public class TimeClientSucPackageHandler extends ChannelHandlerAdapter {
     private int counter;
     private byte[] req;
 
-    public TimeClientErrPackageHandler() {
+    public TimeClientSucPackageHandler() {
         req = ("QUERY TIME ORDER" + System.getProperty("line.separator")).getBytes();
     }
 
@@ -25,10 +25,7 @@ public class TimeClientErrPackageHandler extends ChannelHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf buf = (ByteBuf) msg;
-        byte[] req = new byte[buf.readableBytes()];
-        buf.readableBytes();
-        String body = new String(req, "UTF-8");
+        String body = (String) msg;
         System.out.println("Now is : " + body + " ; the counter is : " + ++counter);
     }
 

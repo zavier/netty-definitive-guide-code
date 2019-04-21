@@ -1,0 +1,3 @@
+简单的Netty使用demo
+
+包括可能出现的TCP粘包、拆包问题即解决方案（使用LineBasedFrameDecoder、StringDecoder解码器）

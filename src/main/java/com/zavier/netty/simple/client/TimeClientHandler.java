@@ -1,4 +1,4 @@
-package com.zavier.netty.client;
+package com.zavier.netty.simple.client;
 
 import com.zavier.nio.client.TimeClientHandle;
 import io.netty.buffer.ByteBuf;
